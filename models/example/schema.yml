@@ -1,0 +1,108 @@
+
+version: 2
+
+models:
+  - name: region
+    description: "Gives us all the regions. It is materialize as a 'View' since that's how it is setup by default **See dbt_project.yml"
+    columns:
+      - name: R_REGIONKEY
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          - accepted_values:
+              values: [0, 1, 2, 3, 4]
+              quote: False
+
+  - name: suppliers
+    description: "Gives us suppliers. It is materialize as a 'View' since that's how it is setup by default **See dbt_project.yml"
+    columns:
+      - name: S_SUPPKEY
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: customer_orders
+    description: "This gives us the total purchases per customer on snowflake's sample dataset and I materialize it as a 'Table'.
+    We achieve this by doing a LEFT JOIN  on the order table with the customer table--See model--"
+    columns:
+      - name:  c_custkey
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: cumulative_orders_by_date
+    description: "This gives us the total sales by date on snowflake's sample datadet and I materialize it as a 'Table'.
+    We achieve this by doing a GROUP BY on the O_ORDERDATE columns --See model--"
+    columns:
+      - name:  o_orderdate
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: incremental_model_date  
+    description: "I'm testing here to see how 'incremental' materialization models work. I do this by creating a model that will only look for a date that 
+    does not exist in the snowflakes table we queried the first time"
+    columns:
+      - name: d_date
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null    
+
+  - name: incremental_model_time    
+    description: "I'm making a second test here to be more confortable with 'incremental' materialization models. I do this by creating 
+    a model that will give us every second in a day. Like previously in the 'incremental_model_date', the model that will only look for a secound that 
+    does not exist in the snowflakes table we queried the first time"
+    columns:
+      - name: t_time_sk
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null               
+
+  - name: ephemeral_link_client1
+    description: "In order to test the ephemeral materialization model. I will create this modele that query the customer table as reference for ephemeral_link_client2.
+    This model is ephemeral so it will only run under the hood of dbt and will not show in Snowflake"
+    columns:
+      - name: c_custkey
+        description: "The primary key for this table"
+
+  
+  - name: ephemeral_link_client2
+    description: "This model is using the query in ephemeral_link_client1 as a reference. This allowed us to get the C_phone colunm without saving the data 
+    from tabe customer tablein snowflake. This model will be shown is snow flake as a Table"
+    columns:
+      - name: c_custkey
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('ephemeral_link_client1')
+              field: c_custkey
+
+  - name: advanced_config_test
+    description: "This model will be only used to test advanced configurations like Alias,schema and database. Will will also create a 
+    new database called 'analytics_test so transfer this model there'"
+    columns:
+      - name: c_custkey
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          
+  - name: custom_test2
+    description: "A SQL Query file to mess around with various tests"
+    columns: 
+      - name: c_custkey
+        tests:  
+          - unique
+          - not_null
+      - name: c_mktsegment
+        tests:
+          - accepted_values:
+              values: ["BUILDING","AUTOMOBILE","MACHINERY","HOUSEHOLD","FURNITURE"]
