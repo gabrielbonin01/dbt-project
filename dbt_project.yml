@@ -24,7 +24,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_modules"
 
-
+on-run-end:
+  - 'grant usage on schema analytics.dbt to role hook_test'
+  - 'grant select on all tables in schema analytics.dbt to role hook_test'
+  - 'grant select on all views in schema analytics.dbt to role hook_test'
+  
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
