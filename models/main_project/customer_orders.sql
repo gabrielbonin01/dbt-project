@@ -6,9 +6,9 @@ SELECT
     c.c_nationkey as nation,
     sum(o.o_totalprice) as total_order_price
 
-FROM "SAMPLE DATA"."TPCH_SF1"."CUSTOMER" c
+FROM "SAMPLE_DATA"."TPCH_SF1"."CUSTOMER" c
 
-LEFT JOIN "SAMPLE DATA"."TPCH_SF1"."ORDERS" o
+LEFT JOIN "SAMPLE_DATA"."TPCH_SF1"."ORDERS" o
 
 ON c.c_custkey = o.o_custkey
 

@@ -84,17 +84,7 @@ models:
           - relationships:
               to: ref('ephemeral_link_client1')
               field: c_custkey
-
-  - name: advanced_config_test
-    description: "This model will be only used to test advanced configurations like Alias,schema and database. Will will also create a 
-    new database called 'analytics_test so transfer this model there'"
-    columns:
-      - name: c_custkey
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
-          
+                
   - name: custom_test2
     description: "A SQL Query file to mess around with various tests"
     columns: 

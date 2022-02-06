@@ -5,7 +5,7 @@ WITH daily_orders AS (
     SELECT
         o_orderdate,
         sum(o_totalprice) AS daily_price
-    FROM "SAMPLE DATA"."TPCH_SF1"."ORDERS"
+    FROM "SAMPLE_DATA"."TPCH_SF1"."ORDERS"
     GROUP BY o_orderdate
     ORDER BY o_orderdate ASC)
  

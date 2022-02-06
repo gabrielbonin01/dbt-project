@@ -24,6 +24,10 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_modules"
 
+on-run-start:
+  - 'create table if not exists audit (model text, state text, time timestamp_ltz)'
+
+
 on-run-end:
   - 'grant usage on schema analytics.dbt to role hook_test'
   - 'grant select on all tables in schema analytics.dbt to role hook_test'
@@ -38,12 +42,17 @@ on-run-end:
 models:
   dbt_project:
     # Config indicated by + and applies to all files under models/exaSSmple/
-    example:
+    main_project:
       +materialized: view
-    new_model_folder:
-      +materialized: view  
+    advanced_config:
+      +materialized: view
+      +pre-hook: "insert into dbt.audit (model, state, time) values ('{{this.name}}', 'starting model deployment', current_timestamp)"
+      +post-hook: 'grant usage on schema {{target.schema}} to role hook_test'
+      +post-hook: 'grant select on {{this}} to role hook_test'    
+      tags: 'daily' #giving a test tag to make main_project model to run daily.
 vars:
 
    my_var1: True
    my_var2: 5
    my_var3: 10
+

@@ -2,7 +2,7 @@
 
 with ephemeral_test as (
 
-    SELECT * FROM "SAMPLE DATA"."TPCH_SF1"."CUSTOMER"
+    SELECT * FROM "SAMPLE_DATA"."TPCH_SF1"."CUSTOMER"
 )
 
 select *

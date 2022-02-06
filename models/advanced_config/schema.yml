@@ -1,0 +1,48 @@
+
+version: 2
+
+models:
+  - name: advanced_config_test
+    description: "This model will be only used to test advanced configurations like Alias,schema and database. Will will also create a 
+    new database called 'analytics_test so transfer this model there'"
+    columns:
+      - name: c_custkey
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: testing_hooks
+    description: "This modele is only use to test 'hooks' and see in snowflake if the permission are transfer to the role and user"
+    columns:
+      - name: r_regionkey
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null          
+
+  - name: testing_snapshots
+    description: "Im using this modele to thest snapshots in order to track changing data over time"
+    columns:
+       - name: id
+         description: "The primary key for this table"
+         tests:
+         - unique    
+
+
+  - name: testing_macro_group_by
+    description: "This macro will be used to group by some element using a forloop that take N as the number of aggregation you want to perform"
+     
+  - name: testing_macro_segmentation
+    description: "This macro will be used to group some segment from the table costumer in sample_data TPCH_SF1"
+
+  - name: testing_tags
+    description: "this model is only use to see if the tags with 'dbt run --model tag:test_tag' is woring"   
+
+sources:
+  - name: sample
+    database: sample_data
+    schema: tpch_sf1
+    tables:
+      - name: customer
+      - name: orders

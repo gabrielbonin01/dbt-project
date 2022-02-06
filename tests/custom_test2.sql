@@ -6,6 +6,6 @@ returned. Otherwise, if there is no line the test will pass. In this case, the t
 SELECT
 	sum(c_acctbal) total_acct_bal
 FROM
-	"SAMPLE DATA"."TPCH_SF1"."CUSTOMER"
+	"SAMPLE_DATA"."TPCH_SF1"."CUSTOMER"
 HAVING 
 	SUM(c_acctbal) > 100000000000000
