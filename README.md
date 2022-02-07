@@ -61,7 +61,7 @@
 
 <li>Creating a dev and production environment to be able to separate my code if I work in a team</li>
 
-<li>Using <a href="https://docs.getdbt.com/docs/guides/best-practices#break-complex-models-up-into-smaller-pieces">Common table expressions (CTE)</a> to make my models easier to read, avoid repetition, and more easily reuse code</li>
+<li>Using <a href="https://docs.getdbt.com/docs/guides/best-practices#break-complex-models-up-into-smaller-pieces">Common table expressions (CTE)</a></li>
 
 <li>Using <a href="https://docs.getdbt.com/reference/resource-configs/tags">tags</a> on my models in order to use them when I schedule JOBS in dbt cloud</li>
 
