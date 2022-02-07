@@ -8,7 +8,7 @@
 
 <li>Creating a <a href="https://docs.snowflake.com/en/sql-reference/sql/create-warehouse.html">Data Warehouse</a> and a <a href="https://docs.snowflake.com/en/sql-reference/sql/create-warehouse.html">Database</a> in Snowflake .</li>
 
-<li>Creating an admin and dev user with several different <a href="https://docs.snowflake.com/en/user-guide/security-access-control-overview.html#roles">roles</a> and <a href="https://docs.snowflake.com/en/user-guide/security-access-control-overview.html#privileges">roles</a> privileges</li>
+<li>Creating an admin and dev user with several different <a href="https://docs.snowflake.com/en/user-guide/security-access-control-overview.html#roles">roles</a> and <a href="https://docs.snowflake.com/en/user-guide/security-access-control-overview.html#privileges">privileges</a></li>
 
 </ul>
 
