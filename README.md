@@ -29,11 +29,11 @@
 
 <li>Creating <a href="https://docs.getdbt.com/docs/building-a-dbt-project/building-models/using-variables">variables</a> and used them in my models </li>
 
-<li> <a href="https://docs.getdbt.com/reference/resource-properties/tests">tests<a> models and setting up <a href="https://docs.getdbt.com/docs/guides/writing-custom-generic-tests">custom generic tests</a><li>
+<li> <a href="https://docs.getdbt.com/reference/resource-properties/tests">Tests<a> models and setting up <a href="https://docs.getdbt.com/docs/guides/writing-custom-generic-tests">custom generic tests</a><li>
 
 
 
-<h3>Deploying and dbt cloud</h3>
+<h3>Deploying and DBT cloud</h3>
 
 
 <li>Connecting my <a href="https://docs.getdbt.com/reference/resource-properties/tests">github repository to dbt cloud</a></li>
@@ -61,9 +61,9 @@
 
 <li>Creating a dev and production environment to be able to separate my code if I work in a team</li>
 
-<li>Using <a href="https://docs.getdbt.com/docs/guides/best-practices#break-complex-models-up-into-smaller-pieces">Common table expressions (CTE)</a> to make my models easier to read  to avoid repetition and reuse code more easily</li>
+<li>Using <a href="https://docs.getdbt.com/docs/guides/best-practices#break-complex-models-up-into-smaller-pieces">Common table expressions (CTE)</a> to make my models easier to read, avoid repetition, and more easily reuse code</li>
 
-<li>Using <a href="https://docs.getdbt.com/reference/resource-configs/tags">tags</a> on my models in order to use them when I schedule a JOB in dbt cloud to avoid repetition and reuse code more easily</li>
+<li>Using <a href="https://docs.getdbt.com/reference/resource-configs/tags">tags</a> on my models in order to use them when I schedule JOBS in dbt cloud</li>
 
 <li><a href="https://docs.getdbt.com/docs/guides/best-practices#limit-references-to-raw-data">Limited my data</a> to reduce the time of tests and runs</li>
 
