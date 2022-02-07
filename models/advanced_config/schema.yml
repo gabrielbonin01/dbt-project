@@ -3,8 +3,7 @@ version: 2
 
 models:
   - name: advanced_config_test
-    description: "This model will be only used to test advanced configurations like Alias,schema and database. Will will also create a 
-    new database called 'analytics_test so transfer this model there'"
+    description: "This template will only be used to test advanced configurations like Alias, schema and database."
     columns:
       - name: c_custkey
         description: "The primary key for this table"
@@ -13,7 +12,7 @@ models:
           - not_null
 
   - name: testing_hooks
-    description: "This modele is only use to test 'hooks' and see in snowflake if the permission are transfer to the role and user"
+    description: "This model is only used to test hooks and see in snowflake if permissions are transferred to role and user"
     columns:
       - name: r_regionkey
         description: "The primary key for this table"
@@ -22,7 +21,7 @@ models:
           - not_null          
 
   - name: testing_snapshots
-    description: "Im using this modele to thest snapshots in order to track changing data over time"
+    description: "I'm using this model to test snapshots in order to track changing data over time"
     columns:
        - name: id
          description: "The primary key for this table"
@@ -31,13 +30,13 @@ models:
 
 
   - name: testing_macro_group_by
-    description: "This macro will be used to group by some element using a forloop that take N as the number of aggregation you want to perform"
+    description: "This macro will be used to group  some element using a for loop that take N as the number of aggregation you want to perform"
      
   - name: testing_macro_segmentation
     description: "This macro will be used to group some segment from the table costumer in sample_data TPCH_SF1"
 
   - name: testing_tags
-    description: "this model is only use to see if the tags with 'dbt run --model tag:test_tag' is woring"   
+    description: "This model is use to see if the tags with 'dbt run --model tag:test tag' is working"   
 
 sources:
   - name: sample
