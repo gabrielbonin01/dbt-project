@@ -13,10 +13,6 @@
 </ul>
 
 <h3>DBT</h3>
-<ul>
-
-
-<ul>
 
 
 <h3>Models and Tests</h3>
