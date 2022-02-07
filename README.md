@@ -21,7 +21,7 @@
 
 <h3>Models and Tests</h3>
 
-<li>Connecting my <a href="https://docs.getdbt.com/reference/warehouse-profiles/snowflake-profile">dbt project profile</a> to my with my snowflake Warehouse</li>
+<li>Connecting my <a href="https://docs.getdbt.com/reference/warehouse-profiles/snowflake-profile">dbt project profile</a> to my snowflake Warehouse</li>
 
 <li>Testing and materializing models like: <a href="https://docs.getdbt.com/docs/building-a-dbt-project/building-models/materializations">Table, View, Incremental, Ephemeral</a></li>
 
