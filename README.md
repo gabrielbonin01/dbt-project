@@ -29,11 +29,11 @@
 
 <li>Creating <a href="https://docs.getdbt.com/docs/building-a-dbt-project/building-models/using-variables">variables</a> and used them in my models </li>
 
-<li>Using <a href="https://docs.getdbt.com/reference/resource-properties/tests">tests<a> in almost all my models and I also have set up <a href="https://docs.getdbt.com/docs/guides/writing-custom-generic-tests">custom generic tests</a><li>
+<li> <a href="https://docs.getdbt.com/reference/resource-properties/tests">tests<a> models and setting up <a href="https://docs.getdbt.com/docs/guides/writing-custom-generic-tests">custom generic tests</a><li>
 
 
 
-<h3>Deploying and sbt cloud</h3>
+<h3>Deploying and dbt cloud</h3>
 
 
 <li>Connecting my <a href="https://docs.getdbt.com/reference/resource-properties/tests">github repository to dbt cloud</a></li>
@@ -44,7 +44,7 @@
 
 <li>Connecting my <a href="https://docs.getdbt.com/reference/resource-properties/tests">github repository to dbt cloud</a></li>
 
-<li>I've <a href="https://docs.getdbt.com/docs/running-a-dbt-project/running-dbt-in-production">scheduled jobs</a> to use dbt in production via dbt cloud</li>
+<li><a href="https://docs.getdbt.com/docs/running-a-dbt-project/running-dbt-in-production">Scheduled jobs</a> to use dbt in production via dbt cloud</li>
 
 
 
