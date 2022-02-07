@@ -1,5 +1,7 @@
 {{ config(materialized='table') }}
 
+with custormer_orders as (
+
 SELECT
     c.c_custkey,
     c.c_name,
@@ -16,3 +18,7 @@ GROUP BY
     c.c_custkey,
     c.c_name,
     c.c_nationkey
+
+)    
+
+SELECT * FROM custormer_orders
