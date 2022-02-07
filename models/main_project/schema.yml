@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: region
-    description: "Gives us all the regions. It is materialize as a 'View' since that's how it is setup by default **See dbt_project.yml"
+    description: "This model gives us all the regions. It is materialize as a 'View' since that's how it is setup by default**See dbt_project.yml"
     columns:
       - name: R_REGIONKEY
         description: "The primary key for this table"
@@ -15,7 +15,7 @@ models:
               quote: False
 
   - name: suppliers
-    description: "Gives us suppliers. It is materialize as a 'View' since that's how it is setup by default **See dbt_project.yml"
+    description: "This model gives us suppliers. It is materialize as a 'View' since that's how it is setup by default **See dbt_project.yml"
     columns:
       - name: S_SUPPKEY
         description: "The primary key for this table"
@@ -34,7 +34,7 @@ models:
           - not_null
 
   - name: cumulative_orders_by_date
-    description: "This gives us the total sales by date on snowflake's sample datadet and I materialize it as a 'Table'.
+    description: "This gives us the total sales by date on snowflake's sample dataset and I materialize it as a 'Table'.
     We achieve this by doing a GROUP BY on the O_ORDERDATE columns --See model--"
     columns:
       - name:  o_orderdate
@@ -74,7 +74,7 @@ models:
   
   - name: ephemeral_link_client2
     description: "This model is using the query in ephemeral_link_client1 as a reference. This allowed us to get the C_phone colunm without saving the data 
-    from tabe customer tablein snowflake. This model will be shown is snow flake as a Table"
+    from customer table in snowflake. This model will be shown in Snowflake as a Table"
     columns:
       - name: c_custkey
         description: "The primary key for this table"
@@ -86,7 +86,7 @@ models:
               field: c_custkey
                 
   - name: custom_test2
-    description: "A SQL Query file to mess around with various tests"
+    description: "This model isused for a custom test"
     columns: 
       - name: c_custkey
         tests:  
