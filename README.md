@@ -8,7 +8,7 @@
 
 <li>I created a <a href="https://docs.snowflake.com/en/sql-reference/sql/create-warehouse.html">Data Warehouse</a> and a <a href="https://docs.snowflake.com/en/sql-reference/sql/create-warehouse.html">Database</a> in Snowflake .</li>
 
-<li>I created an admin and dev user with several different <a href="https://docs.snowflake.com/en/user-guide/security-access-control-overview.html#roles">roles</a> and <a href="https://docs.snowflake.com/en/user-guide/security-access-control-overview.html#privileges">roles</a>privileges</li>
+<li>I created an admin and dev user with several different <a href="https://docs.snowflake.com/en/user-guide/security-access-control-overview.html#roles">roles</a> and <a href="https://docs.snowflake.com/en/user-guide/security-access-control-overview.html#privileges">roles</a> privileges</li>
 
 </ul>
 
@@ -51,9 +51,21 @@
 <h3>Advanced DBT Topics</h3>
 
 
-<li><a href="https://github.com/gabrielbonin01/data-science-portfolio/blob/main/Data%20science%20portfolio/Convolutional%20Neural%20Networks%20for%20Image%20Classification/Digit%20Recognizer%20with%20the%20MNIST%20dataset/Digit%20Recognizer%20with%20the%20MNIST%20dataset.ipynb">Digit Recognizer with the MNIST data</a>: For this project, we work with work with the MNIST DataSet obtained from Kaggle. Using a Deep Learning neural network, our goal here will be to predict the Digit on images.</li>
+<li>I set up <a href="https://docs.getdbt.com/docs/building-a-dbt-project/hooks-operations">hooks (pre-hook, post-hook)</a> and an Audit table to log all action running in deployments</li>
 
+<li>I created <a href="https://docs.getdbt.com/docs/building-a-dbt-project/snapshots">Snapshots</a> to track changes in variables over time</li>
 
+<li> Use <a href="https://docs.getdbt.com/docs/building-a-dbt-project/using-sources">Source</a> to simplify the code and reference them in my models</li>
+
+<li>Create multiple <a href="https://docs.getdbt.com/docs/building-a-dbt-project/jinja-macros">Macros</a> to avoid repetition and reuse code more easily</li>
+
+<li>I created a dev and production environment to be able to separate my code if I work in a team</li>
+
+<li>Use <a href="https://docs.getdbt.com/docs/guides/best-practices#break-complex-models-up-into-smaller-pieces">Common table expressions (CTE)</a> to make my models easier to read  to avoid repetition and reuse code more easily</li>
+
+<li>Use <a href="https://docs.getdbt.com/reference/resource-configs/tags">tags</a> on my models in order to use them when I schedule a JOB in dbt cloud to avoid repetition and reuse code more easily</li>
+
+<li><a href="https://docs.getdbt.com/docs/guides/best-practices#limit-references-to-raw-data">Limited my data</a> to reduce the time of tests and runs</li>
 
 </ul>
 </ul>
